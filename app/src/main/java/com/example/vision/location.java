@@ -73,12 +73,12 @@ public class location extends AppCompatActivity implements TextToSpeech.OnInitLi
 
                                 try {
                                     Geocoder geocoder = new Geocoder(location.this, Locale.getDefault());
-                                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                                    String text=address.getText().toString();
-                                    textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH,null);
+                                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); 
                                     lattitude.setText("Lattitude: "+addresses.get(0).getLatitude());
                                     longitude.setText("Longitude: "+addresses.get(0).getLongitude());
                                     address.setText("Address: "+addresses.get(0).getAddressLine(0));
+                                    String text=address.getText().toString();
+                                    textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH,null);
                                     city.setText("City: "+addresses.get(0).getLocality());
                                     country.setText("Country: "+addresses.get(0).getCountryName());
                                 } catch (IOException e) {
