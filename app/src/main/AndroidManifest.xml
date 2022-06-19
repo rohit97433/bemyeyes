@@ -8,7 +8,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -43,12 +44,6 @@
 
         </activity>
 
-        <activity
-            android:name=".location"
-            android:label="location">
-
-        </activity>
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
@@ -63,6 +58,12 @@
         <activity
             android:name=".currency"
             android:label="currency identifier">
+
+        </activity>
+
+        <activity
+            android:name=".location"
+            android:label="Current Location">
 
         </activity>
 
