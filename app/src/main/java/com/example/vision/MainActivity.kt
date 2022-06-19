@@ -62,7 +62,7 @@ private var tts: TextToSpeech? = null
             R.id.timeDate -> "You clicked Time/Date and Battery status!"
             R.id.weather -> "You clicked weather"
             R.id.currency -> "you clicked currency identifier"
-                    R.id.cameracard -> "you clicked loacation"
+                    R.id.cameracard -> "you clicked location"
             else -> throw IllegalArgumentException("Undefined Clicked")
 
             }
@@ -78,7 +78,7 @@ private var tts: TextToSpeech? = null
         R.id.timeDate -> Intent(this, TimeDateActivity::class.java)
         R.id.weather -> Intent(this, com.example.vision.weather::class.java)
         R.id.currency -> Intent(this,com.example.vision.currency ::class.java)
-                    R.id.cameracard -> Intent(this,com.example.vision.location ::class.java)
+                    R.id.cameracard -> Intent(this,location ::class.java)
         //R.id.cameraCard -> Intent(this, Camera::class.java)
         else -> throw IllegalArgumentException("Undefined Clicked")
         }
